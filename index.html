@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Early Bird Coffee</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header>
         <nav class="navbar">
-            <div class="logo">Early Bird Coffee</div>
+            <div class="brand">
+                <img src="logo.png" alt="Early Bird Coffee Logo" class="nav-logo">
+                <div class="logo-text">Early Bird Coffee</div>
+            </div>
 
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -27,12 +28,13 @@
         </nav>
     </header>
 
-
     <main>
 
         <!-- HERO SECTION -->
         <section id="home" class="hero">
             <div class="hero-content">
+                <img src="logo.png" alt="Early Bird Coffee Logo" class="hero-logo">
+
                 <p class="small-title">Start Your Morning Right</p>
 
                 <h1>Fresh Coffee for Every Early Bird</h1>
@@ -42,16 +44,12 @@
                     mornings and relaxing weekends.
                 </p>
 
-                <a href="#products" class="main-button">
-                    Shop Coffee
-                </a>
+                <a href="#products" class="main-button">Shop Coffee</a>
             </div>
         </section>
 
-
         <!-- PRODUCTS -->
         <section id="products" class="products-section">
-
             <div class="section-heading">
                 <p>Our Coffee</p>
                 <h2>Choose Your Favorite</h2>
@@ -61,24 +59,14 @@
                 </span>
             </div>
 
-
             <div class="product-grid">
 
-                <!-- PRODUCT 1 -->
                 <div class="product-card">
-
-                    <div class="product-image coffee-bag">
-                        ☕
-                    </div>
+                    <div class="product-image coffee-bag">☕</div>
 
                     <div class="product-info">
-
-                        <p class="product-label">
-                            Freshly Ground
-                        </p>
-
+                        <p class="product-label">Freshly Ground</p>
                         <h3>Coffee Grounds</h3>
-
                         <p class="description">
                             Rich and smooth coffee grounds that can be used
                             with your favorite coffee maker.
@@ -90,31 +78,19 @@
                                 <span class="unit"> / bag</span>
                             </div>
 
-                            <button
-                                onclick="addToCart('Coffee Grounds', 12)">
+                            <button onclick="addToCart('Coffee Grounds', 12)">
                                 Add to Cart
                             </button>
                         </div>
-
                     </div>
                 </div>
 
-
-                <!-- PRODUCT 2 -->
                 <div class="product-card">
-
-                    <div class="product-image coffee-pods">
-                        ☕
-                    </div>
+                    <div class="product-image coffee-pods">☕</div>
 
                     <div class="product-info">
-
-                        <p class="product-label">
-                            Quick & Convenient
-                        </p>
-
+                        <p class="product-label">Quick & Convenient</p>
                         <h3>Coffee Keurig Pods</h3>
-
                         <p class="description">
                             A convenient box of 25 coffee pods designed
                             for compatible Keurig coffee makers.
@@ -126,28 +102,20 @@
                                 <span class="unit"> / 25 pods</span>
                             </div>
 
-                            <button
-                                onclick="addToCart('Coffee Keurig Pods', 27)">
+                            <button onclick="addToCart('Coffee Keurig Pods', 27)">
                                 Add to Cart
                             </button>
                         </div>
-
                     </div>
                 </div>
 
             </div>
         </section>
 
-
         <!-- ABOUT -->
         <section id="about" class="about-section">
-
             <div class="about-text">
-
-                <p class="small-title">
-                    About Early Bird Coffee
-                </p>
-
+                <p class="small-title">About Early Bird Coffee</p>
                 <h2>Coffee Made for Better Mornings</h2>
 
                 <p>
@@ -162,12 +130,9 @@
                     using a single Keurig pod, Early Bird Coffee gives you
                     options that fit your morning routine.
                 </p>
-
             </div>
 
-
             <div class="about-box">
-
                 <div class="about-stat">
                     <h3>2</h3>
                     <p>Coffee Products</p>
@@ -182,113 +147,76 @@
                     <h3>Fast</h3>
                     <p>Easy Ordering</p>
                 </div>
-
             </div>
-
         </section>
-
 
         <!-- NEWSLETTER -->
         <section class="newsletter">
-
             <h2>Join the Early Bird Club</h2>
-
             <p>
                 Sign up to receive special offers, product updates,
                 and coffee news.
             </p>
 
             <form id="newsletter-form">
-
                 <input
                     type="email"
                     id="email"
                     placeholder="Enter your email address"
                     required
                 >
-
-                <button type="submit">
-                    Subscribe
-                </button>
-
+                <button type="submit">Subscribe</button>
             </form>
 
             <p id="newsletter-message"></p>
-
         </section>
-
 
         <!-- CONTACT -->
         <section id="contact" class="contact-section">
-
             <h2>Contact Us</h2>
-
             <p>
                 Have a question about Early Bird Coffee?
                 We would love to hear from you.
             </p>
-
-            <p>
-                Email:
-                <strong></strong>
-            </p>
-
+            <p>Email: <strong>support@earlybirdcoffee.com</strong></p>
         </section>
 
     </main>
 
-
     <!-- SHOPPING CART -->
     <div id="cart-panel" class="cart-panel">
-
         <div class="cart-header">
             <h2>Your Cart</h2>
-
-            <button onclick="toggleCart()">
-                ✕
-            </button>
+            <button onclick="toggleCart()">✕</button>
         </div>
-
 
         <div id="cart-items">
-
-            <p id="empty-cart-message">
-                Your cart is empty.
-            </p>
-
+            <p id="empty-cart-message">Your cart is empty.</p>
         </div>
-
 
         <div class="cart-total">
-            Total:
-            $<span id="cart-total">0.00</span>
+            Total: $<span id="cart-total">0.00</span>
         </div>
-
 
         <button class="checkout-button" onclick="checkout()">
             Checkout
         </button>
-
     </div>
 
-
     <footer>
-
-        <div>
-            <h3>Early Bird Coffee</h3>
-            <p>Fresh coffee. Better mornings.</p>
+        <div class="footer-brand">
+            <img src="logo.png" alt="Early Bird Coffee Logo" class="footer-logo">
+            <div>
+                <h3>Early Bird Coffee</h3>
+                <p>Fresh coffee. Better mornings.</p>
+            </div>
         </div>
 
         <div>
-            <p>
-                © 2026 Early Bird Coffee
-            </p>
+            <p>© 2026 Early Bird Coffee</p>
         </div>
-
     </footer>
 
-
     <script src="script.js"></script>
-
 </body>
 </html>
