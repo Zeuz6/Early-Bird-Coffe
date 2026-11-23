@@ -324,3 +324,24 @@ function changeLanguage(language) {
     });
 
 }
+
+function toggleMobileMenu() {
+
+    const navLinks =
+        document.getElementById("nav-links");
+
+    navLinks.classList.toggle("active");
+}
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            const navLinks =
+                document.getElementById("nav-links");
+
+            navLinks.classList.remove("active");
+        });
+
+    });
