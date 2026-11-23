@@ -205,8 +205,8 @@ header {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 .product-card {
@@ -223,12 +223,17 @@ header {
 }
 
 .product-image {
-    height: 260px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 110px;
-    background-color: var(--bg-soft);
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .coffee-pods {
@@ -256,6 +261,16 @@ header {
 .description {
     color: var(--text-soft);
     min-height: 70px;
+}
+
+.product-details {
+    margin: 18px 0 0 20px;
+    color: var(--text-soft);
+    font-size: 14px;
+}
+
+.product-details li {
+    margin-bottom: 5px;
 }
 
 .product-bottom {
@@ -517,6 +532,9 @@ footer p {
    RESPONSIVE
 ------------------------------ */
 @media (max-width: 900px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
     .nav-links {
         display: none;
     }
@@ -722,4 +740,57 @@ footer p {
 .policy-card p {
     color: var(--text-soft);
     margin-bottom: 14px;
+}
+
+/* -----------------------------
+   TESTIMONIALS
+------------------------------ */
+
+.testimonials-section {
+    background-color: var(--bg-secondary);
+    padding: 90px 25px;
+}
+
+.testimonial-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.testimonial-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 18px;
+
+    padding: 30px;
+
+    transition: 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.stars {
+    color: var(--accent);
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.testimonial-card p {
+    color: var(--text-soft);
+    margin-bottom: 20px;
+}
+
+.testimonial-card strong {
+    color: var(--accent);
 }
