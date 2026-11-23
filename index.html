@@ -16,14 +16,85 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#policies">Policies</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a
+                        href="#home"
+                        data-en="Home"
+                        data-es="Inicio"
+                    >
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#products"
+                        data-en="Products"
+                        data-es="Productos"
+                    >
+                        Products
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#about"
+                        data-en="About Us"
+                        data-es="Sobre Nosotros"
+                    >
+                        About Us
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#team"
+                        data-en="Team"
+                        data-es="Equipo"
+                    >
+                        Team
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#faq"
+                        data-en="FAQ"
+                        data-es="Preguntas"
+                    >
+                        FAQ
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#policies"
+                        data-en="Policies"
+                        data-es="Políticas"
+                    >
+                        Policies
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#contact"
+                        data-en="Contact"
+                        data-es="Contacto"
+                    >
+                        Contact
+                    </a>
+                </li>
             </ul>
+
+            <div class="site-options">
+
+                <select id="language-selector" onchange="changeLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+            
+                <select id="currency-selector" onchange="changeCurrency(this.value)">
+                    <option value="USD">USD $</option>
+                    <option value="MXN">MXN $</option>
+                    <option value="EUR">EUR €</option>
+                </select>
+            
+            </div>
 
             <button class="cart-button" onclick="toggleCart()">
                 Cart (<span id="cart-count">0</span>)
@@ -40,14 +111,26 @@
 
                 <p class="small-title">Start Your Morning Right</p>
 
-                <h1>Fresh Coffee for Every Early Bird</h1>
+                <h1
+                    data-en="Fresh Coffee for Every Early Bird"
+                    data-es="Café Fresco Para Cada Madrugador"
+                >
+                    Fresh Coffee for Every Early Bird
+                </h1>
 
                 <p>
                     Start your day with fresh, flavorful coffee made for busy
                     mornings and relaxing weekends.
                 </p>
 
-                <a href="#products" class="main-button">Shop Coffee</a>
+                <a
+                    href="#products"
+                    class="main-button"
+                    data-en="Shop Coffee"
+                    data-es="Comprar Café"
+                >
+                    Shop Coffee
+                </a>
             </div>
         </section>
 
@@ -55,7 +138,12 @@
         <section id="products" class="products-section">
             <div class="section-heading">
                 <p>Our Coffee</p>
-                <h2>Choose Your Favorite</h2>
+                <h2
+                    data-en="Choose Your Favorite"
+                    data-es="Elige Tu Favorito"
+                >
+                    Choose Your Favorite
+                </h2>
                 <span>
                     Whether you prefer traditional coffee grounds or the
                     convenience of Keurig pods, we have something for you.
@@ -98,7 +186,7 @@
                     <div class="product-bottom">
 
                         <div>
-                            <span class="price">$12.00</span>
+                            <span class="price product-price" data-usd="12">$12.00</span>
                             <span class="unit"> / bag</span>
                         </div>
 
@@ -148,7 +236,7 @@
                     <div class="product-bottom">
 
                         <div>
-                            <span class="price">$7.00</span>
+                            <span class="price product-price" data-usd="27">$27.00</span>
                             <span class="unit"> / 25 pods</span>
                         </div>
 
@@ -198,7 +286,7 @@
                     <div class="product-bottom">
 
                         <div>
-                            <span class="price">$15.00</span>
+                            <span class="price product-price" data-usd="15">$15.00</span>
                             <span class="unit"> / mug</span>
                         </div>
 
@@ -241,7 +329,12 @@
 
             <div class="section-heading">
                 <p>Customer Reviews</p>
-                <h2>Don't Just Take Our Word for It</h2>
+                <h2
+                    data-en="Don't Just Take Our Word for It"
+                    data-es="No Solo Confíes en Nuestra Palabra"
+                >
+                    Don't Just Take Our Word for It
+                </h2>
                 <span>See what our customers are saying about Early Bird Coffee.</span>
             </div>
 
@@ -364,7 +457,12 @@
 
             <div class="section-heading">
                 <p>Frequently Asked Questions</p>
-                <h2>Questions? We Have Answers.</h2>
+                <h2
+                    data-en="Questions? We Have Answers."
+                    data-es="¿Preguntas? Tenemos Respuestas."
+                >
+                    Questions? We Have Answers.
+                </h2>
                 <span>
                     Here are some common questions about Early Bird Coffee,
                     our products, shipping, and ordering.
@@ -513,7 +611,12 @@
 
         <!-- CONTACT -->
         <section id="contact" class="contact-section">
-            <h2>Contact Us</h2>
+            <h2
+                data-en="Contact Us"
+                data-es="Contáctanos"
+            >
+                Contact Us
+            </h2>
             <p>
                 Have a question about Early Bird Coffee?
                 We would love to hear from you.
@@ -540,7 +643,7 @@
         </div>
 
         <div class="cart-total">
-            Total: $<span id="cart-total">0.00</span>
+            Total: <span id="cart-total">0.00</span>
         </div>
 
         <button class="checkout-button" onclick="checkout()">

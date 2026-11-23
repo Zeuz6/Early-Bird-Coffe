@@ -119,7 +119,8 @@ function updateCart() {
                 </strong>
 
                 <p>
-                    $${item.price.toFixed(2)}
+                    ${currencySymbols[selectedCurrency]}
+                    ${(item.price * currencyRates[selectedCurrency]).toFixed(2)}
                     ×
                     ${item.quantity}
                 </p>
@@ -152,7 +153,8 @@ function updateCart() {
 
 
     cartTotal.textContent =
-        totalPrice.toFixed(2);
+    currencySymbols[selectedCurrency] +
+    (totalPrice * currencyRates[selectedCurrency]).toFixed(2);
 
 }
 
@@ -252,3 +254,73 @@ newsletterForm.addEventListener(
 
     }
 );
+
+/* ----------------------------------
+   CURRENCY SELECTOR
+----------------------------------- */
+
+let selectedCurrency = "USD";
+
+const currencyRates = {
+    USD: 1,
+    MXN: 18.50,
+    EUR: 0.86
+};
+
+const currencySymbols = {
+    USD: "$",
+    MXN: "MX$",
+    EUR: "€"
+};
+
+
+function changeCurrency(currency) {
+
+    selectedCurrency = currency;
+
+    const prices =
+        document.querySelectorAll(".product-price");
+
+    prices.forEach(price => {
+
+        const usdPrice =
+            Number(price.dataset.usd);
+
+        const convertedPrice =
+            usdPrice * currencyRates[currency];
+
+        price.textContent =
+            currencySymbols[currency] +
+            convertedPrice.toFixed(2);
+
+    });
+
+    updateCart();
+}
+
+/* ----------------------------------
+   LANGUAGE SELECTOR
+----------------------------------- */
+
+function changeLanguage(language) {
+
+    const translatedElements =
+        document.querySelectorAll("[data-en][data-es]");
+
+    translatedElements.forEach(element => {
+
+        if (language === "es") {
+
+            element.textContent =
+                element.dataset.es;
+
+        } else {
+
+            element.textContent =
+                element.dataset.en;
+
+        }
+
+    });
+
+}

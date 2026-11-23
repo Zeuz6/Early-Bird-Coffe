@@ -794,3 +794,25 @@ footer p {
 .testimonial-card strong {
     color: var(--accent);
 }
+
+.site-options {
+    display: flex;
+    gap: 10px;
+}
+
+.site-options select {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+
+    border: 1px solid var(--border-soft);
+    border-radius: 20px;
+
+    padding: 9px 12px;
+
+    cursor: pointer;
+    outline: none;
+}
+
+.site-options select:hover {
+    border-color: var(--accent);
+}
